@@ -17,5 +17,20 @@ int main(){
 	
 	return 0;
 }
-
-//Do not modify source code above this line
+void shuffle(int &a,int &b,int &c,int &d){
+	int fong[]={50,100,500,1000};
+	int jai[4] ;
+	for(int i=0;i<4;i++){
+		jai[i]=rand()%4;
+		for(int j = 0;j<i;j++){
+			if(jai[i]==jai[j]){
+				i--;
+				break;
+			}
+		}
+	}
+	a = fong[jai[0]];
+	b = fong[jai[1]];
+	c = fong[jai[2]];
+	d = fong[jai[3]];
+}
